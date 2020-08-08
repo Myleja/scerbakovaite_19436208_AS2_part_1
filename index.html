@@ -20,16 +20,25 @@
   <body>
     <header class="main-header">
       <nav>
-        <div class="logo">
+        <!-- <div class="logo">
           <img src="./img/Frame 1.png" alt="logo" />
-        </div>
-        <ul>
+        </div> -->
+        <ul class="links">
                     <!-- navigation links  -->
           <li><a href="index.html" class="active">Home</a></li>
           <li><a href="portfolio.html">Portfolio</a></li>
           <li><a href="cv.html">CV</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
+        <div class="toggle">
+          <p>Dark / Light Mode</p>
+          <input type="checkbox" class="checkbox" id="chk" />
+	<label class="label" for="chk">
+		<i class="fas fa-moon"></i>
+		<i class="fas fa-sun"></i>
+		<div class="ball"></div>
+	</label>
+        </div>
         <div class="burger">
           <span class="line1"></span>
           <span class="line2"></span>
@@ -51,7 +60,7 @@
             Hello, <br> My Name Is Oksana
           </h1>
           <p>
-            And <br> I am Junior Front End Web Developer & Designer
+            And <br> I am Junior Front-End Web Developer & Designer
           </p>
         </div>
         
@@ -80,7 +89,7 @@
       </ul>
       </ul>
     </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js"></script>
-    <script src="app.js"></script>
+    <!-- <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js"></script> -->
+    <script src="app.js"></script> 
   </body>
 </html>

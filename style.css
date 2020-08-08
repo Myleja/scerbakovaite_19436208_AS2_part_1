@@ -12,49 +12,67 @@
 html {
   font-size: 62.5%;
   font-family: "Poppins", sans-serif;
+  /* overflow: hidden; */
 }
+
+/* body {
+  height: 100%;
+} */
 
 /* navigation styling*/
 
-a {
-  text-decoration: none;
-  color: black;
-  padding: 1rem;
+.main-header {
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
 }
-/* .main-header {
-  
-} */
 
 nav {
+  min-height: 10vh;
   width: 90%;
   margin: auto;
   display: flex;
-  align-items: center;
   flex-direction: row;
-  min-height: 10vh;
-  padding: 3rem 0rem;
+  align-items: center;
+  /*padding: 1rem 0rem; */
 }
-.logo {
-  flex: 1 1 20rem;
+/* .logo {
+  flex: 1 1 10rem;
 }
-nav ul {
-  display: flex;
-  justify-content: space-around;
-  flex: 1 1 20rem;
+
+.logo img {
+  width: 10%;
+  height: 10%;
+  object-fit: cover;
+} */
+
+.links {
+  
+display: flex;
+justify-content: space-around;
+flex: 2 1 10rem;
 }
 nav li {
+  display: flex;
+  
   list-style: none;
   font-size: 3rem;
-  font-weight: bold;
 }
+
+nav a {
+  text-decoration: none;
+  color: black;
+  /* padding: 0.5rem; */
+}
+
+
+
 /* index.html main section*/
 
 .main-section {
   display: flex;
-  flex-wrap: wrap; /* applying flexbox  */
+  flex-wrap: wrap;
   min-height: 80vh;
-  width: 95%;
-  margin: 0 0 0 auto;
+  width: 90%;
+  margin: auto;
 }
 .main-text {
   flex: 1 1 40rem;
@@ -66,23 +84,27 @@ nav li {
   font-family: "Frank Ruhl Libre", serif;
 }
 .main-text p {
-  padding: 0rem 10rem;
+  padding: 1rem 10rem;
   font-size: 3rem;
   color: rgb(66, 63, 63);
   font-family: "Frank Ruhl Libre", serif;
 }
 .main-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex: 1 1 40rem;
 }
+
 .landing-img {
   width: 90%;
-  height: 80%;
+  height: 90%;
   object-fit: cover;
+  align-self: center;
 }
 /*footer section*/
 footer {
   min-height: 10vh;
-
   padding: 3rem 5%;
   display: flex;
   justify-content: flex-start;
@@ -98,8 +120,71 @@ footer ul {
 }
 footer li {
   list-style: none;
+  align-items: center;
 }
 footer h2 {
   flex: 3 1 40rem;
   font-size: 2rem;
 }
+ /* toggle styling*/
+ .toggle {
+  display: flex;
+  justify-content: flex-end;
+  flex: 1 1 10rem;
+  }
+  body.dark {
+    background: #292C35;
+    color: white;
+    
+  }
+  body.dark a  {
+    color: white;
+  }
+
+  .checkbox {
+    opacity: 0;
+    
+  }
+
+  .label {
+    background-color: rgb(112, 104, 104);
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    position: relative;
+    height: 26px;
+    width: 50px;
+    transform: scale(1.5);
+  }
+  .label .ball {
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: 22px;
+    width: 22px;
+    transform: translateX(0px);
+    transition: transform 0.2s linear;
+  }
+
+  .checkbox:checked + .label .ball {
+    transform: translateX(24px);
+  }
+  
+  
+  .fa-moon {
+    color: #888781;
+  }
+  
+  .fa-sun {
+    color: #f39c12;
+  }
+  
+  .toggle p{
+align-self: center;
+padding: 1rem;
+  }
