@@ -1,8 +1,16 @@
-const chk = document.getElementById('chk');
+// SELECTORS
+const darkModeTgl = document.getElementById('toggle');
 
-chk.addEventListener('change', () => {
-	document.body.classList.toggle('dark');
-});
+// EVENT LISTENERS
+//event listener for dark mode toggle
+darkModeTgl.addEventListener('change', dark);
+
+
+//FUNCTIONS
+//function for dark mode
+function dark() {
+  document.body.classList.toggle('dark');
+}
 
 // document.addEventListener("DOMContentLoaded", () => {
 //   anime({
