@@ -12,12 +12,12 @@
 html {
   font-size: 62.5%;
   font-family: "Poppins", sans-serif;
-  
 }
 /* navigation styling*/
 
 .main-header {
   background-color: rgb(221, 221, 221);
+  /* background: linear-gradient(135deg, rgb(221, 221, 221) 79%, rgb(221, 221, 221) 40%, rgb(255, 255, 255) 100%);   */
   box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
 }
 
@@ -28,33 +28,31 @@ nav {
   display: flex;
   flex-direction: row;
   align-items: center;
-  /*padding: 1rem 0rem; */
+  padding: 0.5rem 0rem;
 }
-/* .logo {
-  flex: 1 1 10rem;
-}
-
-.logo img {
-  width: 10%;
-  height: 10%;
-  object-fit: cover;
-} */
 
 .links {
-display: flex;
-justify-content: space-between;
-flex: 2 1 10rem;
+  display: flex;
+  justify-content: space-between;
+  flex: 2 1 10rem;
 }
+
 nav li {
   display: flex;
-  list-style: none;
   font-size: 3rem;
 }
 
 nav a {
   text-decoration: none;
   color: black;
+  padding: 0.3rem 2rem;
   /* padding: 0rem 1rem; */
+}
+
+.active {
+  background: rgb(112, 104, 104);
+  color: white;
+  border-radius: 2rem;
 }
 
 /* index.html main section*/
@@ -66,22 +64,7 @@ nav a {
   width: 90%;
   margin: auto;
 }
-.main-text {
-  flex: 1 1 40rem;
-  text-align: center;
-}
-.main-text h1 {
-  padding-top: 10rem;
-  font-size: 3.5rem;
-  font-family: "Frank Ruhl Libre", serif;
-}
-.main-text p {
-  padding: 1rem 10rem;
-  font-size: 3rem;
-  color: rgb(66, 63, 63);
-  font-family: "Frank Ruhl Libre", serif;
-}
-.main-img {
+.img-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -95,6 +78,66 @@ nav a {
   align-self: center;
 }
 
+.text-container {
+  flex: 1 1 40rem;
+  text-align: center;
+}
+.intro-text {
+  font-size: 3.5rem;
+  padding: 10rem 5rem;
+  font-family: "Frank Ruhl Libre", serif;
+  font-weight: lighter;
+}
+
+.button {
+  /* background: rgb(112, 104, 104); */
+  color: white;
+  border-radius: 2rem;
+  padding: 1rem 3rem;
+  cursor: pointer;
+  font-size: 3rem;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* button hoover efect
+https://codepen.io/alticreation/pen/zBZwOP?editors=0100 */
+
+.button:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(112, 104, 104);
+  border-radius: 2rem;
+  z-index: -2;
+}
+
+.button:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #292c35;
+  transition: all 0.3s;
+  border-radius: 2rem;
+  z-index: -1;
+}
+.button:hover {
+  color: #fff;
+}
+.button:hover:before {
+  width: 100%;
+}
+
 /*footer styles*/
 footer {
   min-height: 10vh;
@@ -104,97 +147,144 @@ footer {
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
-  
- /* background-color: rgb(221, 221, 221); */
+
+  /* background-color: rgb(221, 221, 221); */
 }
-footer ul {
-  display: flex;
-  flex: 1 1 20rem;
-  justify-content: space-between;
-  align-items: center;
-  
-}
+
 footer li {
   list-style: none;
   align-items: center;
-    text-decoration: none;
-
+  text-decoration: none;
 }
+
+footer ul {
+  display: flex;
+  flex: 1 1 20rem;
+  align-items: center;
+  justify-content: space-around;
+}
+
 footer h2 {
-  flex: 3 1 40rem;
-  font-size: 2rem;
-} 
-footer i {
-  color: black;
+  flex: 1 1 20rem;
+  font-size: 1.5rem;
 }
- /* toggle styling*/
- /* https://codepen.io/FlorinPop17/pen/XWWZYYG */
 
- .toggle-container {
+footer i {
+  color: rgb(112, 104, 104);
+}
+
+footer i:hover {
+  transform: scale(1.5);
+  color: rgb(41, 44, 53);
+}
+
+/* dark mode toggle styling*/
+/* https://codepen.io/FlorinPop17/pen/XWWZYYG */
+
+.toggle-container {
   display: flex;
   justify-content: flex-end;
   flex: 1 1 10rem;
-  }
-  .label {
-    background-color: rgb(112, 104, 104);
-    border-radius: 50px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 5px;
-    position: relative;
-    height: 26px;
-    width: 50px;
-    transform: scale(1.5);
-  }
-  .label .circle {
-    background-color: #fff;
-    border-radius: 50%;
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    height: 22px;
-    width: 22px;
-    transform: translateX(0px);
-    transition: transform 0.2s linear;
-  }
+}
 
-  .dark-mode {
-    opacity: 0;
-  }
+.label {
+  background-color: rgb(112, 104, 104);
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  position: relative;
+  height: 26px;
+  width: 50px;
+  transform: scale(1.5);
+}
+.label .circle {
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: 22px;
+  width: 22px;
+  transform: translateX(0px);
+  transition: transform 0.2s linear;
+}
 
-  .fa-moon {
-    color: #d5d4db;
-  }
-  
-  .fa-sun {
-    color: #f3f17b;
-  }
-  .dark-mode:checked + .label .circle {
-    transform: translateX(24px);
-  }
+.dark-mode {
+  opacity: 0;
+}
+
+.fa-moon {
+  color: #d5d4db;
+}
+
+.fa-sun {
+  color: #f3f17b;
+}
+.dark-mode:checked + .label .circle {
+  transform: translateX(24px);
+}
+
 /* dark mode styles*/
-  body.dark {
-    background: #292C35;
-    color: white;
-    
-  }
-  body.dark a  {
-    color: white;
-  }
-  body.dark p {
-    color: white;
-  }
-  body.dark .label {
-    background-color: white;
-  }
-  body.dark .label .circle {
-    background-color: #50535c;
-  }
+html body.dark {
+  background: rgb(41, 44, 53);
+  color: white;
+}
 
-  
+body.dark a {
+  color: white;
+}
 
-  
-  
-  
+body.dark p {
+  color: white;
+}
+
+body.dark .label {
+  background-color: white;
+}
+
+body.dark .label .circle {
+  background-color: rgb(112, 104, 104);
+}
+body.dark header {
+  background-color: rgb(112, 104, 104);
+}
+
+body.dark footer i {
+  color: rgb(221, 221, 221);
+}
+
+body.dark footer i:hover {
+  color: white;
+}
+
+body.dark .active {
+  background: rgb(221, 221, 221);
+  color: black;
+  border-radius: 2rem;
+}
+/* body.dark .button {
+    color: black;
+  } */
+body.dark .button:after {
+  background-color: rgb(112, 104, 104);
+}
+
+body.dark .button:before {
+  background-color: rgb(221, 221, 221);
+}
+
+/* landing page text animation*/
+span {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease;
+}
+
+span.fade {
+  opacity: 1;
+  transform: translateY(0px);
+  /* color: blue; */
+}
