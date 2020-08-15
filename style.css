@@ -277,9 +277,7 @@ body.dark .button:before {
 body.dark .burger span {
   background: white;
 }
-body.dark .links {
-  background: rgb(41, 44, 53);
-}
+
 
 body.dark .button:hover {
   color: black;
@@ -297,6 +295,54 @@ span.fade {
   transform: translateY(0px);
   /* color: blue; */
 
+/*Portfolio page*/
+.portfolio-main-section {
+  min-height: 80vh;
+  width: 90%;
+  margin: auto;
+}
+
+ section h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  padding: 2rem 0rem;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: space-between;
+padding-bottom: 3rem ;
+}
+
+figure {
+height: 30%;
+width: 30%;
+/* padding: 2rem 1rem;
+
+box-shadow: 0 5px 20px rgba(0,0,0,0.5); */
+}
+
+.project1, .project2, .project3, .project4, .project5 {
+  max-height: 100%;
+  max-width: 100%;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+  border-radius: 5px;
+  /* transition: 1s ease; */
+} 
+.project1:hover, .project2:hover, .project3:hover, .project4:hover, .project5:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+  transform: scale(1.1);
+}
+
+
+figcaption {
+  text-align: center;
+  font-size: 2rem;
+  padding: 2rem 0rem;
+}
 
 @media screen and (max-width: 640px) {
   .burger {
@@ -367,4 +413,11 @@ span.fade {
   .fa-linkedin-in:before {
     font-size: 2.5rem;
   } 
+  body.dark .links {
+    background: rgb(41, 44, 53);
+  }
+  figure {
+    height: 60%;
+    width: 60%;
+}
 }
