@@ -1,8 +1,9 @@
-/* google fonts */
+/* global styles */
 
+/* google fonts */
 @import url("https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre&family=Poppins&display=swap");
 
-/* global styles */
+
 * {
   margin: 0;
   padding: 0;
@@ -13,11 +14,11 @@ html {
   font-size: 62.5%;
   font-family: "Poppins", sans-serif;
 }
+
 /* navigation styling*/
 
 .main-header {
   background-color: rgb(221, 221, 221);
-  /* background: linear-gradient(135deg, rgb(221, 221, 221) 79%, rgb(221, 221, 221) 40%, rgb(255, 255, 255) 100%);   */
   box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
 }
 
@@ -46,13 +47,21 @@ nav a {
   text-decoration: none;
   color: black;
   padding: 0.3rem 2rem;
-  /* padding: 0rem 1rem; */
 }
 
 .active {
   background: rgb(112, 104, 104);
   color: white;
   border-radius: 2rem;
+}
+.burger {
+  display: none;
+}
+.burger div {
+  width: 40px;
+  height: 3px;
+  background-color: rgb(112, 104, 104);
+  margin: 6px;
 }
 
 /* index.html main section*/
@@ -90,7 +99,6 @@ nav a {
 }
 
 .button {
-  /* background: rgb(112, 104, 104); */
   color: white;
   border-radius: 2rem;
   padding: 1rem 3rem;
@@ -139,6 +147,7 @@ https://codepen.io/alticreation/pen/zBZwOP?editors=0100 */
 }
 
 /*footer styles*/
+
 footer {
   min-height: 10vh;
   padding: 1rem 5%;
@@ -147,8 +156,6 @@ footer {
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
-
-  /* background-color: rgb(221, 221, 221); */
 }
 
 footer li {
@@ -201,6 +208,7 @@ footer i:hover {
   width: 50px;
   transform: scale(1.5);
 }
+
 .label .circle {
   background-color: #fff;
   border-radius: 50%;
@@ -265,9 +273,7 @@ body.dark .active {
   color: black;
   border-radius: 2rem;
 }
-/* body.dark .button {
-    color: black;
-  } */
+
 body.dark .button:after {
   background-color: rgb(112, 104, 104);
 }
@@ -275,7 +281,7 @@ body.dark .button:after {
 body.dark .button:before {
   background-color: rgb(221, 221, 221);
 }
-body.dark .burger span {
+body.dark .burger div {
   background: white;
 }
 
@@ -284,7 +290,8 @@ body.dark .button:hover {
 }
 
 /* landing page text animation */
-/* span {
+
+span {
   opacity: 0;
   transform: translateY(50px);
   transition: all 1s ease;
@@ -293,9 +300,10 @@ body.dark .button:hover {
 span.fade {
   opacity: 1;
   transform: translateY(0px);
-  /* color: blue; */
+}
 
 /*Portfolio page*/
+
 .portfolio-main-section {
   min-height: 80vh;
   width: 90%;
@@ -320,9 +328,7 @@ section h1 {
 figure {
   height: 30%;
   width: 30%;
-  /* padding: 2rem 1rem;
-
-box-shadow: 0 5px 20px rgba(0,0,0,0.5); */
+  
 }
 
 .project1,
@@ -334,8 +340,8 @@ box-shadow: 0 5px 20px rgba(0,0,0,0.5); */
   max-width: 100%;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
   border-radius: 5px;
-  /* transition: 1s ease; */
 }
+
 .project1:hover,
 .project2:hover,
 .project3:hover,
@@ -388,6 +394,7 @@ figcaption {
   font-size: 2rem;
   text-align: start;
 }
+
 .top-text,
 h3 {
   font-size: 1.5rem;
@@ -417,7 +424,8 @@ p {
 }
 
 hr {
-  width: 300%; /* line styling */
+  /* line styling */
+  width: 300%; 
   margin-left: auto;
   margin-right: auto;
   color: #535458;
@@ -429,25 +437,20 @@ hr {
 
 @media screen and (max-width: 640px) {
   .burger {
-    cursor: pointer;
-    z-index: 3;
-  }
-  .burger span {
     display: block;
-    padding: 0.2rem 2rem;
-    background: rgb(112, 104, 104);
-    margin: 0.5rem 0rem;
+    cursor: pointer;
     transition: all 0.5s ease;
+    z-index: 3; 
   }
-
+  
   nav a {
     color: black;
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
   .links {
     background: rgb(221, 221, 221);
-    width: 100%;
     height: 100%;
+    width: 100%;
     position: fixed;
     top: 0;
     left: 100%;
@@ -461,15 +464,15 @@ hr {
   .nav-open {
     transform: translateX(-100%);
   }
-  .toggle .line1 {
-    transform: rotateZ(45deg) translateY(300%);
+  .nav-close .line1 {
+    transform: rotateZ(45deg) translateY(400%);
     background: rgb(112, 104, 104);
   }
-  .toggle .line2 {
+  .nav-close .line2 {
     opacity: 0;
   }
-  .toggle .line3 {
-    transform: rotateZ(-45deg) translateY(-300%);
+  .nav-close .line3 {
+    transform: rotateZ(-45deg) translateY(-400%);
     background: rgb(112, 104, 104);
   }
 
@@ -478,17 +481,21 @@ hr {
     padding: 0rem 2rem;
     padding-bottom: 3rem;
   }
+  
   .button {
     font-size: 2rem;
   }
+
   nav {
     width: 80%;
   }
+
   footer h2 {
     order: 2;
     padding-top: 2rem;
     text-align: center;
   }
+
   .fa-github:before,
   .fa-twitter:before,
   .fa-codepen:before,
@@ -511,8 +518,6 @@ hr {
     "section3"
     "section4"
     "section5";
-    padding-left: 2rem;
-    padding-right: 2rem;
 }
 hr {
     width: 100%; /* shorter line */
