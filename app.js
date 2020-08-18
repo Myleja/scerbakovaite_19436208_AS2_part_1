@@ -47,7 +47,43 @@ links.forEach(link => {
   });
 });
 
+const original = document.querySelector(".full-img");
+const imgText = document.querySelector(".caption");
+const modal = document.querySelector(".modal");
+const previews = document.querySelectorAll(".gallery img");
 
+previews.forEach((preview) => {
+  //add a click event to all previews
+  preview.addEventListener("click", () => {
+    // add class open when preview image clicked
+    modal.classList.add("open");
+    //main image animation
+    original.classList.add("open");
+    //dynamic image and text change
+    //access the information from data tags
+    //console.log(originalSrc);
+    const originalSrc = preview.getAttribute("data-original");
+    //console.log(originalSrc);
+    //set the image source
+    original.src = originalSrc;
+    //acces alt tag text
+    const altText = preview.alt;
+    //add it to the caption
+    imgText.textContent = altText;
+  });
+});
+//close modal
+modal.addEventListener("click", (e) => {
+  //check what we click on
+  //console.log(e);
+  //when we click on modal
+  if (e.target.classList.contains("modal")) {
+    //remove modal.open class
+    modal.classList.remove("open");
+    //remove main image animation
+    original.classList.remove("open");
+  }
+});
 
 //selector for text animation
 const text = document.querySelector(".intro-text");
