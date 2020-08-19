@@ -46,7 +46,18 @@
         </div>
       </nav>
     </header>
-    <section class="main-section"></section>
+    <section class="form-section">
+      <h2>Send me a message:</h2>
+      <form>
+          <label for="name">Name*</label>
+          <input type="text" name="name" id="name" required> <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input  -->
+          <label for="email">E-mail*</label>
+          <input type="email" name="email" id="email" required>
+          <label for="message">Message</label>
+          <textarea name="message" id="message" cols="30" rows="10"></textarea>
+          <button type="submit">Submit</button>
+      </form>
+  </section>
     <footer>
       <h2>Oksana Scerbakovaite &copy; 2020</h2>
       <ul>

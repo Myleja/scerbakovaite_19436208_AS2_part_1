@@ -18,7 +18,6 @@ html {
 
 .main-header {
   background-color: rgb(221, 221, 221);
-  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
 }
 
 nav {
@@ -45,7 +44,7 @@ nav li {
 nav a {
   text-decoration: none;
   color: black;
-  padding: 0.3rem 2rem;
+  padding: 0.1rem 3rem;
 }
 
 .active {
@@ -53,6 +52,12 @@ nav a {
   color: white;
   border-radius: 2rem;
 }
+
+nav a:hover {
+font-weight: bold;
+transition: all 0.2s;
+}
+
 .burger {
   display: none;
 }
@@ -93,8 +98,8 @@ nav a {
 .intro-text {
   font-size: 3.5rem;
   padding: 10rem 5rem;
-  font-family: "Frank Ruhl Libre", serif;
-  font-weight: lighter;
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
 }
 
 .button {
@@ -105,7 +110,6 @@ nav a {
   font-size: 3rem;
   text-decoration: none;
   font-family: "Poppins", sans-serif;
-  transition: all 0.3s;
   position: relative;
   overflow: hidden;
   z-index: 1;
@@ -133,17 +137,21 @@ https://codepen.io/alticreation/pen/zBZwOP?editors=0100 */
   left: 0;
   width: 0%;
   height: 100%;
-  background-color: #292c35;
-  transition: all 0.3s;
+  background-color: rgb(41, 44, 53);;
+  transition: all 0.5s;
   border-radius: 2rem;
   z-index: -1;
 }
+
 .button:hover {
   color: #fff;
 }
+
 .button:hover:before {
   width: 100%;
 }
+
+
 
 /*footer styles*/
 
@@ -183,6 +191,7 @@ footer i {
 footer i:hover {
   transform: scale(1.5);
   color: rgb(41, 44, 53);
+  transition: ease-in 0.3s;
 }
 
 /* dark mode toggle styling*/
@@ -232,60 +241,6 @@ footer i:hover {
 }
 .dark-mode:checked + .label .circle {
   transform: translateX(24px);
-}
-
-/* dark mode styles*/
-body.dark {
-  background: rgb(41, 44, 53);
-  color: white;
-}
-
-body.dark a {
-  color: white;
-}
-
-body.dark p {
-  color: white;
-}
-
-body.dark .label {
-  background-color: white;
-}
-
-body.dark .label .circle {
-  background-color: rgb(112, 104, 104);
-}
-body.dark header {
-  background-color: rgb(112, 104, 104);
-}
-
-body.dark footer i {
-  color: rgb(221, 221, 221);
-}
-
-body.dark footer i:hover {
-  color: white;
-}
-
-body.dark .active {
-  background: rgb(221, 221, 221);
-  color: black;
-  border-radius: 2rem;
-}
-
-body.dark .button:after {
-  background-color: rgb(112, 104, 104);
-}
-
-body.dark .button:before {
-  background-color: rgb(221, 221, 221);
-}
-body.dark .burger div {
-  background: white;
-}
-
-body.dark .button:hover {
-  color: black;
 }
 
 /* landing page text animation */
@@ -379,7 +334,6 @@ span.fade {
   padding: 0rem 2rem;
   cursor: pointer;
   font-size: 1.5rem;
-  font-family: "Poppins", sans-serif;
 }
 
 .img-container a {
@@ -388,14 +342,15 @@ span.fade {
 }
 
 .img-container p:hover {
-  transform: scale(1.2);
   background-color: rgb(112, 104, 104);
-  transition: 1s;
+  transition: ease-in 0.3s;
 }
 
 .img-container a:hover {
   color: white;
 }
+
+
 
 /* CV section */
 
@@ -424,9 +379,11 @@ span.fade {
 }
 .skills {
   grid-area: section4;
+  padding: 1rem 0rem;
 }
 .education {
   grid-area: section5;
+  padding: 1rem 0rem;
 }
 
 .top-text h2 {
@@ -476,6 +433,170 @@ hr {
 
 .skills ul {
   list-style-position: inside;
+}
+
+/* Contact page */
+
+.form-section {
+  min-height: 80vh;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form-section h2 {
+  padding: 1rem 0rem;
+  font-size: 2rem;
+  font-family: "Poppins", sans-serif;
+}
+/* form button */
+.form-section button {
+  width: 80%;
+  padding: 1rem 0rem;
+  margin: 2rem;
+  background: rgb(112, 104, 104);
+  font-size: 2.5rem;
+  border: none;
+  border-radius: 2rem;
+  color: white;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+}
+
+form input:focus {
+  outline: 1px solid;
+  border-radius: 1rem;
+}
+
+form textarea:focus {
+  outline: 1px solid;
+  border-radius: 1rem;
+}
+
+.form-section button:hover {
+  background: rgb(41, 44, 53);
+  transition: ease-in-out 0.2s;
+}
+
+.form-section button:focus {
+  background: rgb(41, 44, 53);
+}
+
+form label {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+}
+
+form input {
+  width: 120%;
+  height: 4rem;
+  background-color: rgb(221, 221, 221);
+  border-radius: 1rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+form textarea {
+  background-color: rgb(221, 221, 221);
+  border-radius: 1rem;
+  width: 120%;
+  font-size: 2rem;
+}
+
+/* dark mode styles*/
+body.dark {
+  background: rgb(41, 44, 53);
+  color: white;
+}
+
+body.dark nav a {
+  color: white;
+}
+
+body.dark p {
+  color: white;
+}
+
+body.dark .label {
+  background-color: white;
+}
+
+body.dark .label .circle {
+  background-color: rgb(112, 104, 104);
+}
+body.dark header {
+  background-color: rgb(112, 104, 104);
+}
+
+body.dark footer i {
+  color: rgb(221, 221, 221);
+}
+
+body.dark footer i:hover {
+  color: white;
+}
+
+body.dark footer h2 {
+  color: rgb(221, 221, 221);
+
+}
+
+body.dark .active {
+  background: rgb(221, 221, 221);
+  color: black;
+  border-radius: 2rem;
+}
+
+body.dark .button:after {
+  background-color: rgb(112, 104, 104);
+}
+
+body.dark .button:before {
+  background-color: rgb(221, 221, 221);
+}
+body.dark .burger div {
+  background: white;
+}
+
+body.dark .button:hover {
+  color: black;
+}
+
+body.dark .img-container p {
+  background: rgb(112, 104, 104);
+}
+body.dark .img-container p:hover {
+  color: black;
+  background-color: rgb(221, 221, 221);
+  transition: ease-in 0.3s;
+}
+
+body.dark .img-container a {
+  color: white;
+}
+
+body.dark .img-container a:hover {
+  color: black;
+}
+
+body.dark .form-section button {
+  background: rgb(112, 104, 104);
+  color: white;
+}
+
+body.dark .form-section button:hover {
+  background: rgb(221, 221, 221);
+  color: black;
+  transition: all 0.2s;
 }
 
 @media screen and (max-width: 640px) {
@@ -555,6 +676,7 @@ hr {
   }
 
   .cv-main-section {
+    width: 85%;
     grid-template-columns: 1fr;
     grid-template-areas:
       "section1"
@@ -563,7 +685,41 @@ hr {
       "section4"
       "section5";
   }
+
+  .about-me, .education, .contact-details, .skills {
+    padding: 1rem 0rem;
+  }
+
   hr {
     width: 100%; /* shorter line */
   }
+
+.gallery {
+    padding: 3rem 0rem;
+}
+
+.full-img {
+  height: 30%;
+  top: 30%;
+}
+
+.modal p {
+  font-size: 1.9rem;
+  bottom: 30%;
+}
+
+form input {
+  width: 80%;
+  height: 4rem;
+}
+
+form textarea {
+  width: 80%;
+}
+
+.form-section button {
+  width: 60%;
+  font-size: 2rem;
+}
+
 }
