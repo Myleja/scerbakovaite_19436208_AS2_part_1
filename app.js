@@ -73,6 +73,8 @@ previews.forEach((preview) => {
   });
 });
 //close modal
+// if statment to check that modal is not null before adding an event listener
+if (modal) {
 modal.addEventListener("click", (e) => {
   //check what we click on
   //console.log(e);
@@ -84,10 +86,13 @@ modal.addEventListener("click", (e) => {
     original.classList.remove("open");
   }
 });
+}
 
 //selector for text animation
 const text = document.querySelector(".intro-text");
 // split text in to characters
+// if statment to check that text is not null 
+if (text) {
 const strText = text.textContent;
 const splitText = strText.split("");
 //remove h1 after span created
@@ -113,55 +118,6 @@ function onTick() {
 function complete() {
   clearInterval(timer);
   timer = null;
+  }
 }
 
-
-
-// document.addEventListener("DOMContentLoaded", () => {
-//   anime({
-//     targets: ".logo",
-//     translateX: [-400, 0],
-//     easing: "easeOutExpo",
-//     duration: 1500,
-//     opacity: [0, 1],
-//     delay: 1000,
-//   });
-
-//   anime({
-//     targets: "a",
-//     translateY: [-40, 0],
-//     easing: "easeOutExpo",
-//     duration: 1500,
-//     opacity: [0, 1],
-//     delay: function (el, i, l) {
-//       return 2000 + 100 * i;
-//     },
-//   });
-
-//   anime({
-//     targets: "h1",
-//     translateX: [-400, 0],
-//     easing: "easeOutExpo",
-//     duration: 1500,
-//     opacity: [0, 1],
-//     delay: 1200,
-//   });
-
-//   anime({
-//     targets: "h2,p",
-//     translateY: [-400, 0],
-//     easing: "easeOutExpo",
-//     duration: 1500,
-//     opacity: [0, 1],
-//     delay: 1500,
-//   });
-
-//   anime({
-//     targets: "img",
-//     translateX: [-400, 0],
-//     easing: "easeOutExpo",
-//     duration: 1500,
-//     opacity: [0, 1],
-//     delay: 1500,
-//   });
-// });
