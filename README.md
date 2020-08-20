@@ -2,6 +2,6 @@
 
 Index.html validation
 
-<img src="./screenshots/index.png"/>
+<img src="screenshots/index.png"/>
 
 I had 2 errors.
