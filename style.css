@@ -14,11 +14,11 @@ html {
   font-family: "Poppins", sans-serif;
 }
 
-/* navigation styling*/
-
-.main-header {
-  background-color: rgb(221, 221, 221);
+body {
+  background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
 }
+
+/* navigation styling*/
 
 nav {
   min-height: 10vh;
@@ -54,9 +54,11 @@ nav a {
 }
 
 nav a:hover {
-font-weight: bold;
-transition: all 0.2s;
+  font-weight: bold;
+  transition: all 0.2s;
 }
+
+/* burger */
 
 .burger {
   display: none;
@@ -68,7 +70,7 @@ transition: all 0.2s;
   margin: 6px;
 }
 
-/* index.html main section*/
+/* home main section*/
 
 .main-section {
   display: flex;
@@ -101,7 +103,7 @@ transition: all 0.2s;
   font-family: "Poppins", sans-serif;
   font-weight: normal;
 }
-
+/* landing button */
 .button {
   color: white;
   border-radius: 2rem;
@@ -113,6 +115,7 @@ transition: all 0.2s;
   position: relative;
   overflow: hidden;
   z-index: 1;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
 }
 
 /* button hoover efect
@@ -137,7 +140,7 @@ https://codepen.io/alticreation/pen/zBZwOP?editors=0100 */
   left: 0;
   width: 0%;
   height: 100%;
-  background-color: rgb(41, 44, 53);;
+  background-color: rgb(41, 44, 53);
   transition: all 0.5s;
   border-radius: 2rem;
   z-index: -1;
@@ -150,8 +153,6 @@ https://codepen.io/alticreation/pen/zBZwOP?editors=0100 */
 .button:hover:before {
   width: 100%;
 }
-
-
 
 /*footer styles*/
 
@@ -239,24 +240,12 @@ footer i:hover {
 .fa-sun {
   color: #f3f17b;
 }
+
 .dark-mode:checked + .label .circle {
   transform: translateX(24px);
 }
 
-/* landing page text animation */
-
-span {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: all 1s ease;
-}
-
-span.fade {
-  opacity: 1;
-  transform: translateY(0px);
-}
-
-/*Portfolio page*/
+/*Portfolio page gallery*/
 
 .gallery {
   display: grid;
@@ -298,7 +287,7 @@ span.fade {
   pointer-events: none;
   transition: all 0.25s ease-out;
 }
-
+/* modal animation applied with javascript */
 .modal.open {
   opacity: 1;
   pointer-events: all;
@@ -313,7 +302,7 @@ span.fade {
   transform: translate(-50%, -5%) scale(0.5);
   transition: all 0.25s ease-out;
 }
-
+/* modal image animation, added with javascript */
 .full-img.open {
   transform: translate(-50%, -5%) scale(1);
 }
@@ -350,14 +339,12 @@ span.fade {
   color: white;
 }
 
-
-
-/* CV section */
+/* CV page main section */
 
 .cv-main-section {
-  min-height: 80vh;
   width: 90%;
   margin: auto;
+  min-height: 80vh;
   display: grid;
   grid-column-gap: 1rem;
   grid-template-columns: 1fr 2fr;
@@ -379,11 +366,11 @@ span.fade {
 }
 .skills {
   grid-area: section4;
-  padding: 1rem 0rem;
+  padding: 0.5rem 0rem;
 }
 .education {
   grid-area: section5;
-  padding: 1rem 0rem;
+  padding: 0.5rem 0rem;
 }
 
 .top-text h2 {
@@ -423,8 +410,8 @@ h3 {
   font-weight: 500;
 }
 
+/* line styling */
 hr {
-  /* line styling */
   width: 300%;
   margin-left: auto;
   margin-right: auto;
@@ -435,7 +422,7 @@ hr {
   list-style-position: inside;
 }
 
-/* Contact page */
+/* Contact page form */
 
 .form-section {
   min-height: 80vh;
@@ -451,16 +438,12 @@ form {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding-top: 3rem;
 }
 
-.form-section h2 {
-  padding: 1rem 0rem;
-  font-size: 2rem;
-  font-family: "Poppins", sans-serif;
-}
 /* form button */
 .form-section button {
-  width: 80%;
+  width: 70%;
   padding: 1rem 0rem;
   margin: 2rem;
   background: rgb(112, 104, 104);
@@ -470,6 +453,7 @@ form {
   color: white;
   cursor: pointer;
   font-family: "Poppins", sans-serif;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
 }
 
 form input:focus {
@@ -481,12 +465,12 @@ form textarea:focus {
   outline: 1px solid;
   border-radius: 1rem;
 }
-
+/* hover effect */
 .form-section button:hover {
   background: rgb(41, 44, 53);
   transition: ease-in-out 0.2s;
 }
-
+/* focus effect */
 .form-section button:focus {
   background: rgb(41, 44, 53);
 }
@@ -512,9 +496,33 @@ form textarea {
   font-size: 2rem;
 }
 
-/* dark mode styles*/
+/* landing page text animation to add with javascript */
+
+span {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease;
+}
+
+span.fade {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+/* dark mode styles applied with javascript*/
+
+/* https://cssgradient.io/gradient-backgrounds/ */
+
 body.dark {
-  background: rgb(41, 44, 53);
+  background-image: radial-gradient(
+    circle farthest-corner at -8.9% 51.2%,
+    rgba(255, 124, 0, 1) 0%,
+    rgba(255, 124, 0, 1) 15.9%,
+    rgba(255, 163, 77, 1) 15.9%,
+    rgba(255, 163, 77, 1) 24.4%,
+    rgba(19, 30, 37, 1) 24.5%,
+    rgba(19, 30, 37, 1) 66%
+  );
   color: white;
 }
 
@@ -531,10 +539,7 @@ body.dark .label {
 }
 
 body.dark .label .circle {
-  background-color: rgb(112, 104, 104);
-}
-body.dark header {
-  background-color: rgb(112, 104, 104);
+  background-color: rgb(19, 30, 37);
 }
 
 body.dark footer i {
@@ -547,7 +552,6 @@ body.dark footer i:hover {
 
 body.dark footer h2 {
   color: rgb(221, 221, 221);
-
 }
 
 body.dark .active {
@@ -557,18 +561,22 @@ body.dark .active {
 }
 
 body.dark .button:after {
-  background-color: rgb(112, 104, 104);
+  background-color: rgb(221, 221, 221);
 }
 
 body.dark .button:before {
-  background-color: rgb(221, 221, 221);
+  background-color: rgb(112, 104, 104);
 }
+
 body.dark .burger div {
   background: white;
 }
+body.dark .button {
+  color: black;
+}
 
 body.dark .button:hover {
-  color: black;
+  color: white;
 }
 
 body.dark .img-container p {
@@ -599,6 +607,8 @@ body.dark .form-section button:hover {
   transition: all 0.2s;
 }
 
+/* Mobile view */
+
 @media screen and (max-width: 640px) {
   .burger {
     display: block;
@@ -611,9 +621,9 @@ body.dark .form-section button:hover {
     color: black;
     font-size: 2.5rem;
   }
-
+      /* nav opened in mobile view when burger is displayed */
   .links {
-    background: rgb(221, 221, 221);
+    background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
     height: 100%;
     width: 100%;
     position: fixed;
@@ -626,19 +636,22 @@ body.dark .form-section button:hover {
     justify-content: space-evenly;
   }
 
+  /* burger animation when burger cklicked, applied with javascript */
   .nav-open {
     transform: translateX(-100%);
   }
-
+  /* burger animation when burger clicked to close navigation, applied with javascript */
   .nav-close .line1 {
     transform: rotateZ(45deg) translateY(400%);
     background: rgb(112, 104, 104);
   }
-
+  /* burger animation when burger clicked to close navigation, applied with javascript */
+  /* makes midle line invisible from the burger */
   .nav-close .line2 {
     opacity: 0;
   }
 
+  /* burger animation when burger clicked to close navigation, applied with javascript */
   .nav-close .line3 {
     transform: rotateZ(-45deg) translateY(-400%);
     background: rgb(112, 104, 104);
@@ -672,54 +685,67 @@ body.dark .form-section button:hover {
   }
 
   body.dark .links {
-    background: rgb(41, 44, 53);
+    background-image: radial-gradient(
+      circle farthest-corner at -8.9% 51.2%,
+      rgba(255, 124, 0, 1) 0%,
+      rgba(255, 124, 0, 1) 15.9%,
+      rgba(255, 163, 77, 1) 15.9%,
+      rgba(255, 163, 77, 1) 24.4%,
+      rgba(19, 30, 37, 1) 24.5%,
+      rgba(19, 30, 37, 1) 66%
+    );
   }
 
+  /* I placed grid items in one column for mobile view */
   .cv-main-section {
     width: 85%;
     grid-template-columns: 1fr;
     grid-template-areas:
       "section1"
-      "section2" /* I placed grid items in one column for mobile view */
+      "section2"
       "section3"
       "section4"
       "section5";
   }
 
-  .about-me, .education, .contact-details, .skills {
+  .about-me,
+  .education,
+  .contact-details,
+  .skills {
     padding: 1rem 0rem;
   }
-
+  /* shorter line */
   hr {
-    width: 100%; /* shorter line */
+    width: 100%;
   }
 
-.gallery {
+  .gallery {
     padding: 3rem 0rem;
+  }
+
+  .full-img {
+    height: 30%;
+    top: 30%;
+  }
+
+  .modal p {
+    font-size: 1.9rem;
+    bottom: 30%;
+  }
+
+  form input {
+    width: 80%;
+    height: 4rem;
+  }
+
+  form textarea {
+    width: 80%;
+  }
+
+  .form-section button {
+    width: 60%;
+    font-size: 2rem;
+  }
 }
 
-.full-img {
-  height: 30%;
-  top: 30%;
-}
-
-.modal p {
-  font-size: 1.9rem;
-  bottom: 30%;
-}
-
-form input {
-  width: 80%;
-  height: 4rem;
-}
-
-form textarea {
-  width: 80%;
-}
-
-.form-section button {
-  width: 60%;
-  font-size: 2rem;
-}
-
-}
+/* Tablet view */
