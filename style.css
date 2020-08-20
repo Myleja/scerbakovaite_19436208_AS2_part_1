@@ -229,6 +229,11 @@ footer i:hover {
   transform: translateX(0px);
 }
 
+.label span {
+  opacity: 1;
+  transition: none;
+}
+
 .dark-mode {
   opacity: 0;
 }
@@ -495,6 +500,7 @@ form textarea {
   width: 120%;
   font-size: 2rem;
 }
+
 
 /* landing page text animation to add with javascript */
 
