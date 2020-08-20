@@ -49,7 +49,7 @@ I had to add if statment in a code to check that element is not null.
 
 Github heatmap
 
-<img src="Screenshots/heatmap.png.png"/>
+<img src="Screenshots/heatmap.png"/>
 
 
 
